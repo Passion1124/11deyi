@@ -159,6 +159,7 @@ section .content .content_list .doctor .doctor_info{
 .audio span{
     position: relative;
     top: -.7rem;
+    left: .4rem;
     font-size: 1.5rem;
     color: #fff;
 }

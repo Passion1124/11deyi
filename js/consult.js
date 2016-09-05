@@ -10,6 +10,8 @@ $(function () {
     }else {
         getDepList();
         initSelectData();
+        $(".price").addClass("hide");
+        $(".price input").val(0);
     }
 });
 //function getDepList(){
@@ -139,4 +141,7 @@ $(".price input").on("blur",function(){
 });
 $("header .back").on("click",function(){
     history.back();
+});
+$(".present_box button").on("click", function () {
+    location.href = "index.html"+location.search;
 });

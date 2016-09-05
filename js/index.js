@@ -109,7 +109,7 @@ function question(callback){
                 var ele ="<div class='content_list' questionid='"+Data[i].QuestionID+"'>" +
                     "<div class='user'>" +
                     "<div class='user_left'><p class='head_portrait'></p><p class='ask'></p></div>" +
-                    "<p class='text'>"+Data[i].Question+"</p>";
+                    "<p class='text'>"+Data[i].DepartmentName+"问题："+Data[i].Sex+"，"+Data[i].Age+"。"+Data[i].Question+"</p>";
                 if (Data[i].Type){
                     ele += "</div><div class='doctor'>" +
                         "<div class='doctor_info'>" +
@@ -194,6 +194,7 @@ $(".question button").on("click", function () {
         location.href = "consult.html"+location.search;
     }else {
         $(".popup").removeClass("hide");
+        $("html,body").addClass("ovfHiden");
     }
 });
 $("section").on("click",".content_list .user",function(){

@@ -292,3 +292,72 @@ footer button img{
 .hide{
     display: none;
 }
+.ovfHiden{
+    overflow: hidden;
+    height: 100%;
+}
+.present_box{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.51);
+    z-index: 99;
+}
+.present{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 288px;
+    height: 229px;
+    margin: -114.5px 0 0 -144px;
+    text-align: center;
+    background-color: #fff;
+}
+.present img{
+    width: 69px;
+    height: 69px;
+    margin-top: 20px;
+}
+.present h4{
+    font-size: 16px;
+    color: #555;
+    margin: 6px 0 20px 0;
+}
+.present p{
+    font-size: 12px;
+    color: #888;
+}
+.present button{
+    width: 91px;
+    height: 37px;
+    font-size: 14px;
+    color: #CA572A;
+    border: 1px solid #CA572A;
+    border-radius: 4px;
+    background-color: #FFF;
+    margin-top: 11px;
+}
+.consult_loading{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 10rem;
+    height: 12rem;
+    margin: -6rem 0 0 -5rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #555;
+    background-color: #fff;
+    box-shadow: 0 0 10px #CCC;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 100;
+}
+.consult_loading img{
+    width: 8rem;
+}
+.consult_loading .result{
+    width: 5rem;
+    margin-top: 2.5rem;
+}

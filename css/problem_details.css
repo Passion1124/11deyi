@@ -73,23 +73,53 @@
     height: 21.2rem;
     text-align: center;
 }
-.audio{
-    width: 15.1rem;
-    height: 4rem;
+/*.audio{*/
+    /*width: 15.1rem;*/
+    /*height: 4rem;*/
+    /*margin: .9rem 0 0 1rem;*/
+    /*background-image: url("../img/audio@2x.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+/*}*/
+/*.audio img{*/
+    /*margin: 1rem 0 0 2rem;*/
+    /*width: 15%;*/
+/*}*/
+/*.audio .time{*/
+    /*float: right;*/
+    /*font-size: 1.5rem;*/
+    /*color: #fff;*/
+    /*margin: 1.4rem 1rem 1.4rem 0;*/
+/*}*/
+.audio_box{
     margin: .9rem 0 0 1rem;
+}
+.audio{
+    display: inline-block;
+    width: 16.1rem;
+    height: 4.3rem;
     background-image: url("../img/audio@2x.png");
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0 1rem 0 -.5rem;
 }
 .audio img{
     margin: 1rem 0 0 2rem;
     width: 15%;
 }
-.audio .time{
-    float: right;
+.audio span{
+    position: relative;
+    top: -.7rem;
+    left: .4rem;
     font-size: 1.5rem;
     color: #fff;
-    margin: 1.4rem 1rem 1.4rem 0;
+}
+.audio_box p{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    color: #CCC;
 }
 .heat{
     padding: 2rem 0 1.8rem 1rem;

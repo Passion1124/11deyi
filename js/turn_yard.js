@@ -50,6 +50,8 @@ $(".issue_box section .issue").on("click", function () {
     }
     if (depname !== "选择科室" && title.length >= 20 && userAddress){
         //alert("进入");
+        $(".consult_loading").removeClass("hide");
+        $(".consult_loading img").removeClass("result");
         $(this).attr("disabled",true);
         var Type = "turnyard";
         var data = {title:title, sex:sex, age:age, depid:depid, depname:depname, pics:pics, isanonymous:isanonymous, describe:describe, userAddress:userAddress}
@@ -86,6 +88,7 @@ $(".turnyard .issue_btn").on("click", function () {
         }
     }else {
         $(".popup").removeClass("hide");
+        $("html,body").addClass("ovfHiden")
     }
 });
 $(".issue_box header .back").on("click", function () {
@@ -96,6 +99,13 @@ $(".issue_box header .back").on("click", function () {
 });
 $(".turnyard header .back").on("click", function () {
     history.back();
+});
+$(".present_box button").on("click", function () {
+    $(".present_box").addClass("hide");
+    $(".issue_box").addClass("hide");
+    $(".turnyard").removeClass("hide");
+    queryListForPublishByme();
+    $("html,body").removeClass("ovfHiden");
 });
 function queryListForPublishByme(){
     var token = getLocalStroagelogin().token;
@@ -144,6 +154,9 @@ function queryListForPublishByme(){
                     "</div>" +
                     "</div>";
                 $(ele).insertBefore(".unMoreData");
+                if (Data[i].FaceImgUrl){
+                    $(".turnyard section .list:nth-of-type("+parseInt((pageindex-1)*pagesize+(i+4))+") .head_portrait").css("background-image","url('"+Data[i].FaceImgUrl+"')")
+                }
             }
         },
         error:function(xhr ,errorType ,error) {

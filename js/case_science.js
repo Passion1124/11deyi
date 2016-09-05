@@ -70,6 +70,7 @@ $("section").on("click",".audio", function () {
         $(this).parent().find(".audio span").text(audio_text);
     });
     if ($(this).hasClass("audio_play")){
+        alert("123");
         $("section .audio").each(function(item,index){
             $(this).removeClass("audio_play");
             $(this).parent().find("audio").get(0).pause();

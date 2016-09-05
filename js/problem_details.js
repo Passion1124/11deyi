@@ -76,10 +76,24 @@ function getProblem(id){
                             ele += "<div class='video'><video src='"+video[i].VideoUrl+"' poster='"+video[i].FaceImgUrl+"' webkit-playsinline controls></video></div>"
                         }
                         if (video[i].Type == "A"){
-                            ele += "<div class='audio'>" +
+                            ele += "<div class='audio_box'>" +
                                 "<audio src='"+video[i].VideoUrl+"'></audio>" +
-                                "<img src='img/play03@2x.png' alt='' timelong='"+video[i].TimeLong+"'>" +
-                                "<span class='time'>"+video[i].TimeLong+"’’</span></div>"
+                                //"<img src='img/play03@2x.png' alt='' timelong='"+video[i].TimeLong+"'>" +
+                                //"<span class='time'>"+video[i].TimeLong+"’’</span>" +
+                                "<div class='audio' timelong='"+video[i].TimeLong+"'>" +
+                                "<img src='img/play03@2x.png' alt=''>" +
+                                "<span>限时免费</span>" +
+                                "</div>" +
+                                "<p><span class='minute'></span><span class='second'>"+video[i].TimeLong+"’’</span></p>"+
+                                "</div>";
+
+                            //"<audio src='"+Data[i].Url+"'></audio>" +
+                            //"<div class='audio' timelong='"+Data[i].TimeLong+"'>" +
+                            //"<img src='img/play03@2x.png' alt=''>" +
+                            //    //"<span>"+Data[i].PriceValue+"元偷偷看</span>" +
+                            //"<span>限时免费</span>" +
+                            //"</div>" +
+                            //"<p><span class='minute'></span><span class='second'>"+Data[i].TimeLong+"’’</span></p>";
                         }
                         ele += "<p class='heat'>热度 "+video[i].HotValue+"</p></div>";
                         $("section").append(ele);
